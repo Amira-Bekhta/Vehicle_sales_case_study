@@ -12,7 +12,7 @@ FROM car_prices
 WHERE transmission IS NOT NULL
 GROUP BY LOWER(transmission);
 
--- Q: What is the average selling price for each make and model?
+-- Q: What is the average difference between the selling price and mmr for each model and make?
 SELECT make, model,AVG(mmr - sellingprice)
 AS mmr_price_diff
 FROM car_prices
